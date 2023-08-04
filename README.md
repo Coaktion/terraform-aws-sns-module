@@ -10,10 +10,15 @@ module "sns" {
 
   topics = [
     {
-      name = "name_service_example"
+      name = "my_topic"
+      fifo_topic = false
     },
+    {
+      name = "my_fifo_topic"
+      content_based_deduplication = true
+    }
   ]
-  resource_prefix = "visual_triggers"
-  fifo_topic = true
+  resource_prefix = "prefix_topic"
+  default_fifo_topic = true
 }
 ```

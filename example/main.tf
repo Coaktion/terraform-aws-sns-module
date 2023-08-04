@@ -39,16 +39,13 @@ module "name_service_example_sns_topics" {
   source = "../"
   topics = [
     {
-      name = "validation"
+      name = "my_topic"
+      fifo_topic = false
     },
     {
-      name = "validation_error"
-    },
-    {
-      name = "validation_success"
-    },
-    {
-      name = "validation_warning"
+      name = "my_fifo_topic"
+      content_based_deduplication = true
     }
   ]
+  default_fifo_topic = true
 }
