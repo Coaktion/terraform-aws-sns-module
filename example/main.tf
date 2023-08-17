@@ -38,11 +38,11 @@ module "name_service_example_sns_topics" {
   source = "../"
   topics = [
     {
-      name = "my_topic"
+      name       = "my_topic"
       fifo_topic = false
     },
     {
-      name = "my_fifo_topic"
+      name                        = "my_fifo_topic"
       content_based_deduplication = true
     }
   ]
