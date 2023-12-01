@@ -11,6 +11,7 @@ variable "topics" {
     fifo_topic                  = optional(bool)
     content_based_deduplication = optional(bool)
   }))
+  default = []
 }
 
 variable "default_tags" {
