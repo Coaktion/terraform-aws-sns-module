@@ -1,12 +1,12 @@
 # Terraform SNS Module
 
-Terraform module which creates SNS resources on AWS.
+Módulo Terraform para criação de recursos SNS na AWS.
 
 ## Usage
 
 ```hcl
 module "sns" {
-  source = "github.com/paulo-tinoco/terraform-sns-module"
+  source = "github.com/Coaktion/terraform-aws-sns-module"
 
   topics = [
     {
